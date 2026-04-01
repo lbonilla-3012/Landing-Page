@@ -1,3 +1,4 @@
+import { enviarNotificacionRegistro } from './notificacion'
 import { supabase } from './supabase'
 
 export interface DatosCliente {
@@ -65,7 +66,17 @@ export async function registrarClienteConsentimiento(
       }
     }
 
-    return data as RespuestaRegistro
+    const respuesta = data as RespuestaRegistro;
+
+    // 2. DISPARAR NOTIFICACIÓN (Nivel Senior)
+    // Si la DB guardó todo bien, avisamos al encargado
+    if (respuesta.ok) {
+      // No usamos 'await' aquí para que el usuario no espere 
+      // a que el correo se envíe para ver su mensaje de éxito.
+      enviarNotificacionRegistro(datos); 
+    }
+
+    return respuesta;
 
   } catch (error) {
     console.error('Error inesperado:', error)
