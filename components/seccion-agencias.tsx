@@ -9,44 +9,44 @@ const agencias = [
     id: 1,
     nombre: 'MONTESERRÍN',
     ciudad: 'Quito',
-    direccion: 'Av. Monteserrín y Calle Principal, Quito',
+    direccion: 'De las Alondras, y y De Las Higueras n45b, Quito',
     telefono: '+593 99 999 9001',
-    horario: 'Lun-Vie: 8:00-18:00 | Sáb: 8:00-14:00',
+    horario: 'Lun-Vie: 7:00-17:00 | Sáb: 8:00-14:00',
     esPrincipal: true,
     esNueva: false,
-    mapaUrl: 'https://maps.google.com/?q=Monteserrin+Quito+Ecuador',
-    mapaEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.123456789!2d-78.48!3d-0.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTAnMTIuMCJTIDc4wrAyOCc0OC4wIlc!5e0!3m2!1ses!2sec!4v1234567890',
+    mapaUrl: 'https://maps.app.goo.gl/6bvaoMXFpsCqA7gJ8',
+    mapaEmbed: 'https://www.google.com/maps/embed?pb=!4v1775019193823!6m8!1m7!1sLvPD5QDKiVAoXmoQWTsJ9A!2m2!1d-0.1596448768806974!2d-78.46337688615509!3f55.089024!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade',
   },
   {
     id: 2,
     nombre: 'BRASIL',
     ciudad: 'Quito',
-    direccion: 'Av. Brasil y Naciones Unidas, Quito',
-    telefono: '+593 99 999 9002',
-    horario: 'Lun-Vie: 8:00-18:00 | Sáb: 8:00-14:00',
+    direccion: 'Av. Brasil, Quito',
+    telefono: '+593 96 411 7777',
+    horario: 'Lun-Vie: 8:00-17:00 | Sáb: 8:00-14:00',
     esPrincipal: false,
     esNueva: false,
-    mapaUrl: 'https://maps.google.com/?q=Av+Brasil+Quito+Ecuador',
-    mapaEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.123456789!2d-78.49!3d-0.18!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTAnMTIuMCJTIDc4wrAyOSc0OC4wIlc!5e0!3m2!1ses!2sec!4v1234567890',
+    mapaUrl: 'https://maps.app.goo.gl/jWFitCnu24ifNsdv7',
+    mapaEmbed: 'https://www.google.com/maps/embed?pb=!4v1775019260385!6m8!1m7!1sICHPBUw3J1UZ_1QFsA936g!2m2!1d-0.1633727203334992!2d-78.48954476631958!3f57.055244!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade',
   },
   {
     id: 3,
     nombre: 'ELOY ALFARO',
     ciudad: 'Quito',
-    direccion: 'Av. Eloy Alfaro y 6 de Diciembre, Quito',
-    telefono: '+593 99 999 9003',
-    horario: 'Lun-Vie: 8:00-18:00 | Sáb: 8:00-14:00',
+    direccion: 'De Las Higueras y Av. Eloy Alfaro 100 y, Quito',
+    telefono: '+593 98 725 6144',
+    horario: 'Lun-Vie: 8:00-18:00',
     esPrincipal: false,
     esNueva: false,
-    mapaUrl: 'https://maps.google.com/?q=Av+Eloy+Alfaro+Quito+Ecuador',
-    mapaEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.123456789!2d-78.47!3d-0.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTEnMTIuMCJTIDc4wrAyOCcwMC4wIlc!5e0!3m2!1ses!2sec!4v1234567890',
+    mapaUrl: 'https://maps.app.goo.gl/acVZDUrnriBZ3hTU9',
+    mapaEmbed: 'https://www.google.com/maps/embed?pb=!4v1775019359047!6m8!1m7!1srJtchoQkVHask1NN3VxPOQ!2m2!1d-0.1600389007628354!2d-78.46587629660095!3f164.09363231812313!4f-5.289148399713426!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade',
   },
   {
     id: 4,
     nombre: 'GUAYAQUIL',
     ciudad: 'Guayaquil',
-    direccion: 'Av. Principal, Guayaquil',
-    telefono: '+593 99 999 9004',
+    direccion: 'Av. Juan Tanca Marengo 305, 2º Pasaje 2A Mz21 Villa 4, Guayaquil',
+    telefono: '+593 96 356 7777',
     horario: 'Lun-Vie: 8:00-18:00 | Sáb: 8:00-14:00',
     esPrincipal: false,
     esNueva: true,
@@ -54,6 +54,12 @@ const agencias = [
     mapaEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.123456789!2d-79.89!3d-2.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTAnMTIuMCJTIDc5wrA1Myc0OC4wIlc!5e0!3m2!1ses!2sec!4v1234567890',
   },
 ]
+
+const IconoWhatsApp = () => (
+  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+)
 
 export function SeccionAgencias() {
   const manejarContactoAgencia = (nombreAgencia: string) => {
@@ -146,7 +152,7 @@ export function SeccionAgencias() {
                   onClick={() => manejarContactoAgencia(agencia.nombre)}
                   className="w-full flex items-center justify-center gap-2 bg-marca-amarillo text-marca-azul font-bold py-3 px-4 rounded-full hover:bg-marca-amarillo/90 transition-colors"
                 >
-                  <MessageCircle className="w-5 h-5" />
+                  <IconoWhatsApp/>
                   Contactar esta agencia
                 </button>
               </div>
@@ -163,7 +169,7 @@ export function SeccionAgencias() {
             onClick={() => abrirWhatsApp('Hola 1001Talleres, necesito ayuda para encontrar la agencia más cercana')}
             className="inline-flex items-center justify-center gap-2 bg-marca-azul text-white font-bold py-3 px-8 rounded-full hover:bg-marca-azul/90 transition-colors"
           >
-            <MessageCircle className="w-5 h-5" />
+            <IconoWhatsApp/>
             Escríbenos por WhatsApp
           </button>
         </div>

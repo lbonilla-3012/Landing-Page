@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, MessageCircle, MapPin, ShieldCheck, Car, Building2 } from 'lucide-react'
+import { Clock, MessageCircle, MapPin, ShieldCheck, Car, Building2,ClipboardCheck } from 'lucide-react'
 import { FormularioDiagnostico } from './formulario-diagnostico'
 
 export function SeccionHero() {
@@ -53,7 +53,7 @@ export function SeccionHero() {
               onClick={() => setFormularioAbierto(true)}
               className="flex items-center justify-center gap-3 bg-marca-amarillo text-marca-azul font-bold text-base md:text-lg px-6 md:px-8 py-4 rounded-full cursor-pointer hover:bg-marca-amarillo/90 hover:scale-105 transition-all shadow-lg"
             >
-              <MessageCircle className="w-6 h-6" />
+              <ClipboardCheck className="w-6 h-6" />
               ¡Diagnóstico GRATIS ahora!
             </button>
             <Link

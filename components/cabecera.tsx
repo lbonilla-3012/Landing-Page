@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { abrirWhatsApp } from '@/lib/servicios'
 
+
 export function Cabecera() {
   const [menuAbierto, setMenuAbierto] = useState(false)
   const [scrollPasadoHero, setScrollPasadoHero] = useState(false)
