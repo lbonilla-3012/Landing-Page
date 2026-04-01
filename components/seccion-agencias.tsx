@@ -35,7 +35,7 @@ const agencias = [
     ciudad: 'Quito',
     direccion: 'De Las Higueras y Av. Eloy Alfaro 100 y, Quito',
     telefono: '+593 98 725 6144',
-    horario: 'Lun-Vie: 8:00-18:00',
+    horario: 'Lun-Vie: 8:00-17:00',
     esPrincipal: false,
     esNueva: false,
     mapaUrl: 'https://maps.app.goo.gl/acVZDUrnriBZ3hTU9',

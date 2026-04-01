@@ -29,7 +29,8 @@ export function Cabecera() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrollPasadoHero 
+        // Si el scroll pasó el hero O si el menú móvil está abierto, ponemos fondo blanco
+        scrollPasadoHero || menuAbierto
           ? 'bg-white shadow-md' 
           : 'bg-transparent'
       }`}
@@ -85,7 +86,10 @@ export function Cabecera() {
           {/* Botón menú móvil */}
           <button
             onClick={() => setMenuAbierto(!menuAbierto)}
-            className={`md:hidden p-2 ${scrollPasadoHero ? 'text-marca-azul' : 'text-white'}`}
+            className={`md:hidden p-2 ${
+              // Cambia a azul si hay scroll O si el menú está abierto
+              scrollPasadoHero || menuAbierto ? 'text-marca-azul' : 'text-white'
+            }`}
             aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
           >
             {menuAbierto ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -100,11 +104,7 @@ export function Cabecera() {
             <div className="flex flex-col gap-4">
               <Link 
                 href="#ubicaciones" 
-                className={`font-medium py-2 ${
-                  scrollPasadoHero 
-                    ? 'text-marca-azul hover:text-marca-azul/80' 
-                    : 'text-white/90 hover:text-white'
-                }`}
+                className="font-medium py-2 text-marca-azul hover:text-marca-azul/80"
                 onClick={() => setMenuAbierto(false)}
               >
                 Ubicaciones
