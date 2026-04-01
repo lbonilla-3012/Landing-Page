@@ -26,7 +26,35 @@ export function FormularioDiagnostico({ estaAbierto, alCerrar }: FormularioDiagn
 
   const manejarCambio = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
-    setDatosFormulario((prev) => ({ ...prev, [name]: value }))
+    let valorFinal = value
+
+    // Lógica específica por campo
+    if (name === 'placaVehiculo') {
+      valorFinal = value.toUpperCase()
+    } 
+    
+    if (name === 'telefono') {
+      // 1. Quitamos cualquier cosa que no sea número
+      // 2. Cortamos a 10 dígitos por si pegan un texto largo
+      valorFinal = value.replace(/\D/g, '').slice(0, 10)
+    }
+
+    setDatosFormulario((prev) => ({ 
+      ...prev, 
+      [name]: valorFinal 
+    }))
+  }
+    
+  const validarPlacaEcuador = (placa: string) => {
+    // Regex: 3 letras + guion opcional + 3 a 4 números
+    const regexPlaca = /^[A-Z]{3}-?\d{3,4}$/i;
+    return regexPlaca.test(placa);
+  }
+
+  const validarTelefonoEcuador = (telefono: string) => {
+    // Verifica que empiece con 09 y tenga un total de 10 dígitos
+    const regexTelefono = /^09\d{8}$/;
+    return regexTelefono.test(telefono);
   }
 
   const manejarEnvio = async (e: React.FormEvent) => {
@@ -34,6 +62,18 @@ export function FormularioDiagnostico({ estaAbierto, alCerrar }: FormularioDiagn
     
     if (!aceptaTerminos) {
       setError('Debes aceptar los términos y condiciones')
+      return
+    }
+
+    // 2. Validar formato de placa
+    if (!validarPlacaEcuador(datosFormulario.placaVehiculo)) {
+      setError('La placa debe tener un formato válido (ej: ABC1234 o ABC123)')
+      return
+    }
+
+      // 3. Validar formato de teléfono
+    if (!validarTelefonoEcuador(datosFormulario.telefono)) {
+      setError('El teléfono debe ser un celular válido de Ecuador (ej: 0999999999)')
       return
     }
 
@@ -167,7 +207,7 @@ export function FormularioDiagnostico({ estaAbierto, alCerrar }: FormularioDiagn
                     value={datosFormulario.telefono}
                     onChange={manejarCambio}
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-marca-amarillo focus:border-marca-amarillo transition-colors"
-                    placeholder="+593 99 999 9999"
+                    placeholder="0999999999"
                   />
                 </div>
                 <div>
@@ -218,13 +258,9 @@ export function FormularioDiagnostico({ estaAbierto, alCerrar }: FormularioDiagn
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-marca-amarillo focus:border-marca-amarillo transition-colors"
                 >
                   <option value="">Selecciona un servicio</option>
-                  <option value="Diagnóstico gratuito">Diagnóstico gratuito</option>
+                  <option value="Diagnóstico gratuito">Diagnóstico gratuito 20 puntos</option>
                   <option value="Mantenimiento preventivo">Mantenimiento preventivo</option>
                   <option value="Mantenimiento correctivo">Mantenimiento correctivo</option>
-                  <option value="Cambio de aceite">Cambio de aceite</option>
-                  <option value="Frenos">Frenos</option>
-                  <option value="Suspensión">Suspensión</option>
-                  <option value="Otro">Otro</option>
                 </select>
               </div>
 
